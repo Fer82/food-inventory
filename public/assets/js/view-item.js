@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     let buttonID;
     let deleteButtonID;
     let newItem;
 
     let storageName = $('#storageName').text().toLowerCase();
-    
-    $('.delete').on("click", function(event) {
+
+    $('.delete').on("click", function (event) {
         deleteButtonID = $(this).attr('id');
         if (storageName === 'fridge') {
             deleteItem('fridge');
@@ -17,7 +17,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.update').on("click", function(event) {
+    $('.update').on("click", function (event) {
         buttonID = $(this).attr('id');
         newItem = {
             name: $(`#name${buttonID}`).text().trim(),

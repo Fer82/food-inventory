@@ -6,17 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://product-gallery.cloudinary.com/all.js" type="text/javascript">
   </script>
-
-
   <title>Tutorial</title>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <style>
     * {
       padding: 5px;
     }
-
 
     h1 {
       font-style: italic;
@@ -30,37 +26,52 @@
 
 <body>
   <div class="container-fluid">
-    <a href="/">
-        <button id="returnBtn" class='btn btn-success shadow' style='border: black solid 3px;'>
-            <i class="fas fa-home fa-4x"></i>
-        </button>
-    </a>
-    <a href="/view-pantry">
-        <button class='btn btn-success shadow' style='border: black solid 3px;'>
-            <i class="fa-2x">Pantry</i>
-        </button>
-    </a>
-    <a href="/view-fridge">
-        <button class='btn btn-success shadow' style='border: black solid 3px;'>
-            <i class="fa-2x">Fridge</i>
-        </button>
-    </a>
-    <a href="/view-freezer">
-        <button class='btn btn-success shadow' style='border: black solid 3px;'>
-            <i class="fa-2x">Freezer</i>
-        </button>
-    </a>
-    <a href="/create-item">
-      <button class='btn btn-success shadow' style='border: black solid 3px; float: right;'>
-          <i class="fas fa-plus fa-4x"></i>
-      </button>
-    </a>
-</div>
+    <nav class="navbar navbar-expand navbar-light">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="/" class="nav-item" class="nav-link">
+              <button id="returnBtn" class='btn btn-success shadow' style='border: black solid 3px;'>
+                <i class="fas fa-home fa-4x"></i>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item" class="nav-item">
+            <a href="/view-pantry" class="nav-link">
+              <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                <i class="fa-2x">Pantry</i>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/view-fridge" class="nav-link">
+              <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                <i class="fa-2x">Fridge</i>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/view-freezer" class="nav-link">
+              <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                <i class="fa-2x">Feezer</i>
+              </button>
+            </a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="/create-item">
+            <button class='btn btn-success shadow' style='border: black solid 3px;'>
+              <i class="fas fa-plus fa-4x"></i>
+            </button>
+          </a>
+        </span>
+      </div>
+    </nav>
+  </div>
   <h1> Tutorial </h1>
   <div id="my-gallery" style="max-width:80%;margin:auto">
   </div>
 </body>
-
 <script type="text/javascript">
   const myGallery = cloudinary.galleryWidget({
     container: "#my-gallery",
@@ -71,7 +82,6 @@
     },
     aspectRation: "4:3",
     mediaAssets: [
-
       { publicId: "tutorial-2", mediaType: "video" },
       { publicId: "index", mediaType: "image" },
       { publicId: "create-item", mediaType: "image" },
@@ -85,9 +95,7 @@
     viewportBreakpoints: [
       { breakpoint: 600, carouselStyle: "thumbnails", carouselLocation: "bottom" },
       { breakpoint: 300, carouselStyle: "indicators", carouselLocation: "bottom", navigation: "always" }]
-
   });
-
   myGallery.render();
 </script>
 

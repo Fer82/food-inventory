@@ -1,20 +1,20 @@
 var db = require("../models");
 
-module.exports = function(app) {
-    app.get("/", function(req, res) {
+module.exports = function (app) {
+    app.get("/", function (req, res) {
         res.render("index");
     });
 
-    app.get("/create-item", function(req, res) {
+    app.get("/create-item", function (req, res) {
         res.render("create-item");
     });
 
-    app.get("/view-fridge", function(req, res) {
+    app.get("/view-fridge", function (req, res) {
         db.Food.findAll({
             where: {
                 location: 'Refrigerator'
             }
-        }).then(function(dbFridge) {
+        }).then(function (dbFridge) {
             var fridgeFoodArray = [];
             dbFridge.forEach(food => fridgeFoodArray.push(food.dataValues));
             var hbsObjectFridge = {
@@ -24,12 +24,12 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/view-freezer", function(req, res) {
+    app.get("/view-freezer", function (req, res) {
         db.Food.findAll({
             where: {
                 location: 'Freezer'
             }
-        }).then(function(dbFreezer) {
+        }).then(function (dbFreezer) {
             var freezerFoodArray = [];
             dbFreezer.forEach(food => freezerFoodArray.push(food.dataValues));
             var hbsObjectFreezer = {
@@ -39,12 +39,12 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/view-pantry", function(req, res) {
+    app.get("/view-pantry", function (req, res) {
         db.Food.findAll({
             where: {
                 location: 'Pantry'
             }
-        }).then(function(dbPantry) {
+        }).then(function (dbPantry) {
             var pantryFoodArray = [];
             dbPantry.forEach(food => pantryFoodArray.push(food.dataValues));
             var hbsObjectPantry = {
@@ -53,7 +53,7 @@ module.exports = function(app) {
             res.render("view-pantry", hbsObjectPantry);
         });
     });
-    app.get("/tutorial", function(req, res) {
+    app.get("/tutorial", function (req, res) {
         res.render("tutorial");
     });
 };

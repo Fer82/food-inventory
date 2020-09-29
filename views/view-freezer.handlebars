@@ -25,8 +25,10 @@
     </style>
 </head>
 <body>
-  <div class="container-fluid">
-      <nav class="navbar navbar-expand navbar-light">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand navbar-light">
+
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -52,7 +54,9 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                     <a href="/create-item">
+
+                    <a href="/create-item">
+
                         <button class='btn btn-success shadow' style='border: black solid 3px;'>
                             <i class="fas fa-plus fa-4x"></i>
                         </button>
@@ -64,30 +68,39 @@
     </div>
     <div class="container">
         {{#each items}}
-            <div class="card" style="margin-top:10px; background-color: beige; border:black solid 4px;">
-                <div id="itemInfo{{id}}"><h5 contenteditable="true" id="name{{id}}" class="card-header"><span>{{name}}</span></h5></div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src={{photo}} alt={{name}} class="img-thumbnail" id="photo-input">
-                        </div>
-                        <div class="col-md-6" style="text-align: center; margin-top: 30px;">
-                            <h1>Amount: <span id="quantity{{id}}" class="card-title" contenteditable="true">{{quantity}}</span></h1>
-                            <h1>Expires on: <span id="expiration{{id}}" class="card-title" contenteditable="true">{{expiration}}</span></h1>
-                            <h1>Description: <span id="description{{id}}" class="card-title" contenteditable="true">{{description}}</span></h1>
-                        </div>
-                        <div class="col-md-3" style='margin-top: 20px; text-align: cemter;'>                     
-                            <button class='update btn btn-primary shadow' id={{id}} style='width: 180px; border: black solid 3px;'>
-                                <i class="far fa-save fa-5x"></i>
-                            </button>
-                            <br>
-                            <button class='delete btn btn-danger shadow' id={{id}} style='width: 180px; margin-top:20px; border: black solid 3px;'>
-                                <i class="far fa-trash-alt fa-5x"></i>
-                            </button>
-                        </div>
+
+        <div class="card" style="margin-top:10px; background-color: beige; border:black solid 4px;">
+            <div id="itemInfo{{id}}">
+                <h5 contenteditable="true" id="name{{id}}" class="card-header"><span>{{name}}</span></h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src={{photo}} alt={{name}} class="img-thumbnail" id="photo-input">
+                    </div>
+                    <div class="col-md-6" style="text-align: center; margin-top: 30px;">
+                        <h1>Amount: <span id="quantity{{id}}" class="card-title"
+                                contenteditable="true">{{quantity}}</span></h1>
+                        <h1>Expires on: <span id="expiration{{id}}" class="card-title"
+                                contenteditable="true">{{expiration}}</span></h1>
+                        <h1>Description: <span id="description{{id}}" class="card-title"
+                                contenteditable="true">{{description}}</span></h1>
+                    </div>
+                    <div class="col-md-3" style='margin-top: 20px; text-align: cemter;'>
+                        <button class='update btn btn-primary shadow' id={{id}}
+                            style='width: 180px; border: black solid 3px;'>
+                            <i class="far fa-save fa-5x"></i>
+                        </button>
+                        <br>
+                        <button class='delete btn btn-danger shadow' id={{id}}
+                            style='width: 180px; margin-top:20px; border: black solid 3px;'>
+                            <i class="far fa-trash-alt fa-5x"></i>
+                        </button>
+
                     </div>
                 </div>
             </div>
+        </div>
         {{/each}}
     </div>
 </body>

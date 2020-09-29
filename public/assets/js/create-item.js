@@ -5,7 +5,7 @@
 // var imgPreview = document.getElementById('img-preview');
 // var fileUpload = document.getElementById('file-upload');
 
-$(document).ready(function() {
+$(document).ready(function () {
     const nameInput = $("#name-input");
     const quantityInput = $("#quantity-input");
     const expirationInput = $("#expiration-input");
@@ -20,7 +20,7 @@ $(document).ready(function() {
     //     var formData = new FormData();
     //         formData.append("file", file);
     //         formData.append("upload_preset", CLOUDNIARY_UPLOAD_PRESET);
-    
+
     //     axios({
     //         url: CLOUDINARY_URL,
     //         method: "POST",
@@ -36,7 +36,7 @@ $(document).ready(function() {
     //     });
     // });
 
-    $('#submit').on("click", function(event) {
+    $('#submit').on("click", function (event) {
         event.preventDefault();
         itemData = {
             name: nameInput.val().trim(),
@@ -47,7 +47,7 @@ $(document).ready(function() {
             photo: photoInput.val().trim()
         }
         console.log(itemData);
-        $.post("/api/items", itemData, function(data) {
+        $.post("/api/items", itemData, function (data) {
             //console.log(data); 
         });
         window.location.href = "/";

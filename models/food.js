@@ -1,7 +1,7 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Food = sequelize.define("Food", {
     name: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 140]
@@ -19,17 +19,17 @@ module.exports = function(sequelize, DataTypes) {
       },
     },
     quantity: {
-      type: DataTypes.INTEGER,  
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultvalue: 1,
       validate: {
-      len: [1,10]
+        len: [1, 10]
       }
     },
     location: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultvalue: "Refrigerator", 
+      defaultvalue: "Refrigerator",
       validate: {
         len: [1, 140]
       }
