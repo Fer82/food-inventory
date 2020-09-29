@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +10,13 @@
     <style>
         #storageName {
             font-style: italic;
-            font-size: 60px;
+            font-size: 5vw;
             margin-left: 30%;
             margin-right: 30%;
             color: blue;
             background-color: lightblue;
             border: solid 5px black;
         }
-
         body {
             background-image: url("/assets/images/fridgeBG.jpg");
             background-repeat: no-repeat;
@@ -26,29 +24,42 @@
         }
     </style>
 </head>
-
 <body>
   <div class="container-fluid">
-        <a href="/">
-            <button id="returnBtn" class='btn btn-success shadow' style='border: black solid 3px;'>
-                <i class="fas fa-home fa-4x"></i>
-            </button>
-        </a>
-        <a href="/view-pantry">
-            <button class='btn btn-success shadow' style='border: black solid 3px;'>
-                <i class="fa-2x">Pantry</i>
-            </button>
-        </a>
-        <a href="/view-freezer">
-            <button class='btn btn-success shadow' style='border: black solid 3px;'>
-                <i class="fa-2x">Freezer</i>
-            </button>
-        </a>
-        <a href="/create-item">
-            <button class='btn btn-success shadow' style='border: black solid 3px; float: right;'>
-                <i class="fas fa-plus fa-4x"></i>
-            </button>
-        </a>
+      <nav class="navbar navbar-expand navbar-light">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-item" class="nav-link">
+                            <button id="returnBtn" class='btn btn-success shadow' style='border: black solid 3px;'>
+                                <i class="fas fa-home fa-4x"></i>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item" class="nav-item">
+                        <a href="/view-pantry" class="nav-link">
+                            <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                                <i class="fa-2x">Pantry</i>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/view-freezer" class="nav-link">
+                            <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                                <i class="fa-2x">Freezer</i>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                     <a href="/create-item">
+                        <button class='btn btn-success shadow' style='border: black solid 3px;'>
+                            <i class="fas fa-plus fa-4x"></i>
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </nav>
         <h1 id='storageName' style="text-align: center;">FRIDGE</h1>
     </div>
     <div class="container">
@@ -80,5 +91,4 @@
         {{/each}}
     </div>
 </body>
-
 </html>
