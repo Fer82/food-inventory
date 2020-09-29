@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,6 @@
             background-color: yellow;
             border: black 5px solid;
         }
-
         body {
             background-image: url("/assets/images/pantryBG.jpg");
             background-repeat: no-repeat;
@@ -26,10 +24,11 @@
         }
     </style>
 </head>
-
 <body>
+
     <div class="container-fluid">
         <nav class="navbar navbar-expand navbar-light">
+
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -55,7 +54,9 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
+
                     <a href="/create-item">
+
                         <button class='btn btn-success shadow' style='border: black solid 3px;'>
                             <i class="fas fa-plus fa-4x"></i>
                         </button>
@@ -67,6 +68,7 @@
     </div>
     <div class="container">
         {{#each items}}
+
         <div class="card" style="margin-top:10px; background-color: beige; border:black solid 4px;">
             <div id="itemInfo{{id}}">
                 <h5 contenteditable="true" id="name{{id}}" class="card-header"><span>{{name}}</span></h5>
@@ -94,6 +96,7 @@
                             style='width: 180px; margin-top:20px; border: black solid 3px;'>
                             <i class="far fa-trash-alt fa-5x"></i>
                         </button>
+
                     </div>
                 </div>
             </div>
@@ -101,5 +104,4 @@
         {{/each}}
     </div>
 </body>
-
 </html>
