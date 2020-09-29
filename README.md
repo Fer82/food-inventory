@@ -12,7 +12,7 @@ This was the Second project for the full stack web development program at UC Irv
 - Must be deployed to Heroku App
 
 # Link to deployed application:
-[https://food-inventory-123.herokuapp.com//](https://food-inventory-123.herokuapp.com//)
+[https://food-inventory-123.herokuapp.com](https://food-inventory-123.herokuapp.com)
 
 # Image of deployed application:
 ![deployed application](/public/assets/images/index.png)
